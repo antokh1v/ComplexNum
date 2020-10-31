@@ -257,4 +257,9 @@ TEST_CASE("Test complex"){
     a = ComplexNum(4332.0/32.0, 398.0/ 321.0) +  0.999999;
     b = complex<double>(4332.0/32.0,398.0 / 321.0) +  0.999999;
     REQUIRE(a == b);
+
+    a.setRe(3.2121);
+    a.setIm(4);
+    REQUIRE(a.getRe().getDouble() == 3.2121);
+    REQUIRE(a.getIm() == 4);
 }
